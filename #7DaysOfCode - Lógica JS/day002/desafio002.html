@@ -14,9 +14,7 @@
     Qual linguagem de programação você esta estudando? <input type="text" name="linguagemtxt" id="linguagemtxt">
     <br>
     <input type="button" value="salvar" onclick="guardar()">
-    <div id="res">
-
-    
+    <div id="res"> 
 
     </div>
     <script>
@@ -24,7 +22,6 @@
             var txtname = window.document.querySelector('input#nametxt').value
             var idade = window.document.querySelector('input#idade').value
             var txtlinguagem = window.document.querySelector('input#linguagemtxt').value
-
             var res = window.document.querySelector('div#res')
             res.innerHTML = `<p>Olá <strong>${txtname}</strong>, você tem <strong>${idade}</strong> anos e já está aprendendo <strong>${txtlinguagem}</strong></p>`
             // Desafio opcional
