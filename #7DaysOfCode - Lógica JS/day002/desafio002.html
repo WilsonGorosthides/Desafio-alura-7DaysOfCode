@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 002 - 7DaysOfCode </title>
+</head>
+<body>
+    <h1>Desafio 002</h1>
+    Qual o seu nome? <input type="text" name="nametxt" id="nametxt">
+    <br>
+    Quantos anos você tem? <input type="number" name="idade" id="idade">
+    <br>
+    Qual linguagem de programação você esta estudando? <input type="text" name="linguagemtxt" id="linguagemtxt">
+    <br>
+    <input type="button" value="salvar" onclick="guardar()">
+    <div id="res">
+
+    
+
+    </div>
+    <script>
+        function guardar() {
+            var txtname = window.document.querySelector('input#nametxt').value
+            var idade = window.document.querySelector('input#idade').value
+            var txtlinguagem = window.document.querySelector('input#linguagemtxt').value
+
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Olá <strong>${txtname}</strong>, você tem <strong>${idade}</strong> anos e já está aprendendo <strong>${txtlinguagem}</strong></p>`
+            // Desafio opcional
+            var resposta = prompt(`Você gosta de estudar ${txtlinguagem}? Responda com o numero 1 para SIM ou número 2 para NÃO.`)
+
+            if (resposta == '1'){
+                res.innerHTML += "<p>Muito bom! Continue estudando e você terá muito sucesso.</p>"
+            } else if (resposta == '2'){
+                res.innerHTML += "<p>Ahh que pena... Já tentou aprender outras linguagens?</p>"
+            } else {
+                res.innerHTML += "<p>Resposta inválida. Por favor, responda com 1 para SIM ou 2 para NÃO.</p>"
+            }
+        }
+    </script>
+</body>
+</html>
